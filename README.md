@@ -27,6 +27,8 @@ The user can used the url for this website
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
+lab07
+
 Name of feature: ___1. Set up your server repository.
 
 Estimate of time needed to complete: _2hr____
@@ -59,21 +61,22 @@ Estimate of time needed to complete: __1hr___
 
 Start time: __7:00___
 
-Finish time: _____
+Finish time: ___8:00__
 
-Actual time needed to complete: _____
+Actual time needed to complete: __1 hr___
 
 
+lab 08
 
-Name of feature: ___1. Weather (live): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip_____________________________
+Name of feature: ___1. Weather (live): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip__
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: __4hr___
 
-Start time: _____
+Start time: _6:00____
 
-Finish time: _____
+Finish time: __9:00___
 
-Actual time needed to complete: _____
+Actual time needed to complete: __3hr___
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
