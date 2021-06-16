@@ -89,6 +89,29 @@ Finish time: _4:00___
 
 Actual time needed to complete: _2hr____
 
+
+***lab9***
+Name of feature: _1. Refactor: Modularize the back-end codebase._______________________________
+
+Estimate of time needed to complete: _1hr____
+
+Start time: _8:00____
+
+Finish time: _8:30___
+
+Actual time needed to complete: __30min___
+
+
+Name of feature: ____2. Refactor: Componentize the front-end codebase.____________________________
+
+Estimate of time needed to complete: _30min____
+
+Start time: _8:30____
+
+Finish time: __9___
+
+Actual time needed to complete: __3min___
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
