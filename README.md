@@ -78,6 +78,17 @@ Finish time: __9:00___
 
 Actual time needed to complete: __3hr___
 
+
+Name of feature: ___2. Movies: As a user of City Explorer, I want to see info about movies related to the city I searched, so that I can learn more about the destination.
+
+Estimate of time needed to complete: __2hr___
+
+Start time: _2:00____
+
+Finish time: _4:00___
+
+Actual time needed to complete: _2hr____
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
