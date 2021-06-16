@@ -63,9 +63,11 @@ app.get('/', // our endpoint name
 
 
 app.get('/movie', (req, res) => {
-  const region = req.query.region.slice(0, 2);
+
+  let region = req.query.region;
   console.log(region);
   if (region) {
+    region=region.slice(0, 2)
     const movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${movieKey}&region=${region}`
     axios.get(movieUrl).then((response) => {
       const modeledData = response.data.results.map((obj) => new Movie(obj));
