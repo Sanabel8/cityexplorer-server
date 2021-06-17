@@ -1,9 +1,9 @@
 const axios = require('axios');
 const Movie = require('../models/movie.model')
 
-const Cache = require('./helper/cache')
-const cacheWeatherObj = new Cache();
-
+const Cache = require('../helper/cache')
+const cacheMovieObj = new Cache();
+             
 require('dotenv').config();
 const movieKey = process.env.MOVIE_API_KEY;
 
@@ -12,9 +12,8 @@ const movieController = (req, res) => {
 
     console.log(region);
     if (region) {
-
-        if (cacheWeatherObj[region] && (Date.now() - cacheWeatherObj[region].timestamp < 86400000)) {
-            res.json(cacheWeatherObj[region].data)
+        if (cacheMovieObj[region] ) {
+            res.json(cacheMovieObj[region])
         } else {
 
             region = region.slice(0, 2)
@@ -22,8 +21,7 @@ const movieController = (req, res) => {
 
             axios.get(movieUrl).then((response) => {
                 const modeledData = response.data.results.map((obj) => new Movie(obj));
-                cacheMovieObj[region].data = modeledData
-                cacheMovieObj[region].timestamp = Date.now()
+                cacheMovieObj[region] = modeledData
                 res.json(modeledData);
             }).catch((error) => {
                 res.send(error.message)

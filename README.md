@@ -122,9 +122,9 @@ Estimate of time needed to complete: _2hr____
 
 Start time: _1:00____
 
-Finish time: _____
+Finish time: __3:00___
 
-Actual time needed to complete: _____
+Actual time needed to complete: _2hr____
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
