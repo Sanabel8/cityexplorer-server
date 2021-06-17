@@ -112,6 +112,20 @@ Finish time: __9___
 
 Actual time needed to complete: __3min___
 
+
+
+
+***lab10***
+Name of feature: _1: Performance: As a user, I want the application to work with recent results, so that I can see info without the app doing unnecessary API calls.___
+
+Estimate of time needed to complete: _2hr____
+
+Start time: _1:00____
+
+Finish time: __3:00___
+
+Actual time needed to complete: _2hr____
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 

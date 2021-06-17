@@ -1,6 +1,9 @@
 const axios = require('axios');
 const Weather = require('../models/weather.model');
 
+const Cache = require('../helper/cache')
+const cacheWeatherObj = new Cache();
+
 const weatherBitKey = process.env.WEATHER_API_KEY;
 require('dotenv').config();
 
@@ -8,25 +11,34 @@ require('dotenv').config();
 const weatherController = (req, res) => {
   const lat = req.query.lat;
   const lon = req.query.lon;
-  console.log(lat);
-  console.log(lon);
+ 
+  const requstWeatheKey = `${lat}-${lon}`;
 
   if (lat && lon) {
 
-    const weatherBitUrl = `https://api.weatherbit.io/v2.0/forecast/daily?key=${weatherBitKey}&lat=${lat}&lon=${lon}`
-    axios.get(weatherBitUrl).then(response => {
+    if (cacheWeatherObj[requstWeatheKey]  ) {
 
-      const responseData = response.data.data.map((obj) => new Weather(obj));
 
-      res.json(responseData)
+      res.json(cacheWeatherObj[requstWeatheKey])
+    } else {
 
-    }).catch(error => {
+      const weatherBitUrl = `https://api.weatherbit.io/v2.0/forecast/daily?key=${weatherBitKey}&lat=${lat}&lon=${lon}`
+      axios.get(weatherBitUrl).then(response => {
 
-      res.send(error.message)
-    });
+        const responseData = response.data.data.map((obj) => new Weather(obj));
+        cacheWeatherObj[requstWeatheKey] =responseData;
+        // cacheWeatherObj[requstWeatheKey].timestamp =Data.now();
 
+        res.json(responseData)
+
+      }).catch(error => {
+
+        res.send(error.message)
+      });
+
+    }
   } else {
     res.send('please provied the lon & lat')
   }
 }
-module.exports = weatherController; 
+module.exports = weatherController;
