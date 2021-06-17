@@ -1,5 +1,7 @@
 const express = require('express') 
 const app = express() 
+
+
 // const weatherData = require('./data/weather.json')
 
 const cors = require('cors');
